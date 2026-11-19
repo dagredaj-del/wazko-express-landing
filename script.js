@@ -59,6 +59,9 @@
         });
         if (grid) grid.style.transform = 'perspective(600px) rotateX(1deg) translateY(' + (y * 0.05) + 'px)';
 
+        // En móvil (una sola columna) no aplicamos el nudge 3D por scroll
+        if (window.innerWidth <= 980) { ticking = false; return; }
+
         // Profundidad 3D sutil: los bloques se enderezan a medida que entran al centro
         depthEls.forEach(function (el) {
           if (!el.classList.contains('in')) return;

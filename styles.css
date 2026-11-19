@@ -28,11 +28,12 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+html,body{max-width:100%;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
 body{
   font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   background:var(--bg);color:var(--ink);line-height:1.65;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+  -webkit-font-smoothing:antialiased;position:relative;
 }
 h1,h2,h3,h4,.brand__text{font-family:'Sora',sans-serif;line-height:1.14;letter-spacing:-.02em}
 a{color:inherit;text-decoration:none}
@@ -82,12 +83,10 @@ img{max-width:100%;display:block}
   background:rgba(5,7,15,.6);border-bottom:1px solid var(--line)}
 .nav__inner{display:flex;align-items:center;gap:1.2rem;height:72px}
 .brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:700}
-/* Logo vectorial recoloreado con el degradado de marca (vía máscara) */
-.brand__logo{display:inline-block;width:42px;height:42px;
-  background:var(--grad);
-  -webkit-mask:url("assets/wazko-logo.svg") center/contain no-repeat;
-  mask:url("assets/wazko-logo.svg") center/contain no-repeat;
-  filter:drop-shadow(0 6px 16px rgba(45,123,255,.5))}
+/* Símbolo de marca (SVG a color, solo el símbolo) */
+.brand__logo{display:inline-block;width:40px;height:40px;
+  background:url("assets/wazko-mark.svg") center/contain no-repeat;
+  filter:drop-shadow(0 6px 16px rgba(45,123,255,.45))}
 .brand__text{font-size:1.2rem}
 .brand__accent{color:var(--c1)}
 .nav__links{display:flex;gap:1.6rem;margin-left:auto;font-size:.94rem;color:var(--muted)}
@@ -109,10 +108,8 @@ img{max-width:100%;display:block}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;padding:72px 0 50px}
-.hero__logo{display:block;width:120px;height:120px;margin-bottom:1.4rem;
-  background:var(--grad);
-  -webkit-mask:url("assets/wazko-logo.svg") center/contain no-repeat;
-  mask:url("assets/wazko-logo.svg") center/contain no-repeat;
+.hero__logo{display:block;width:104px;height:104px;margin-bottom:1.3rem;
+  background:url("assets/wazko-mark.svg") center/contain no-repeat;
   filter:drop-shadow(0 14px 34px rgba(45,123,255,.55));
   animation:logofloat 6s ease-in-out infinite}
 @keyframes logofloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
@@ -144,14 +141,7 @@ img{max-width:100%;display:block}
 .chat__header{display:flex;align-items:center;gap:.6rem;padding:.7rem .85rem;
   background:linear-gradient(180deg,#121a30,#0d1324);border-bottom:1px solid var(--line)}
 .chat__avatar{width:34px;height:34px;border-radius:50%;border:1px solid var(--line-2);
-  background:var(--grad);
-  -webkit-mask:url("assets/wazko-logo.svg") center/78% no-repeat,linear-gradient(#000 0 0);
-  mask:url("assets/wazko-logo.svg") center/78% no-repeat}
-/* fallback: el avatar muestra el símbolo recoloreado */
-.chat__avatar{-webkit-mask:none;mask:none;display:grid;place-items:center;background:#0d1324;overflow:hidden}
-.chat__avatar::before{content:"";width:78%;height:78%;background:var(--grad);
-  -webkit-mask:url("assets/wazko-logo.svg") center/contain no-repeat;
-  mask:url("assets/wazko-logo.svg") center/contain no-repeat}
+  background:#0d1324 url("assets/wazko-mark.svg") center/76% no-repeat}
 .chat__meta{display:flex;flex-direction:column;line-height:1.25}
 .chat__meta strong{font-size:.88rem}
 .chat__status{font-size:.68rem;color:var(--c1);display:inline-flex;align-items:center;gap:.3rem}
@@ -377,15 +367,41 @@ img{max-width:100%;display:block}
   .footer__grid{grid-template-columns:1fr 1fr}
   .dev{justify-content:center;text-align:center}
 }
+/* En pantallas sin layout de 2 columnas, la escena 3D se apila de forma segura */
+@media(max-width:980px){
+  .hero__visual{perspective:none;width:100%}
+  .scene{position:static;width:100%;max-width:420px;height:auto;margin-inline:auto;
+    transform:none!important;transform-style:flat;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .scene .layer{position:static;transform:none!important}
+  .phone{width:260px}
+  .panel{width:100%;max-width:300px}
+  .floatchip{position:static;transform:none!important;animation:none;align-self:center}
+}
+
 @media(max-width:560px){
-  .section{padding:64px 0}
-  .assist{grid-template-columns:1fr}
-  .footer__grid{grid-template-columns:1fr}
-  .scene{height:560px}
-  .panel{position:static;width:100%;margin-top:18px;transform:none}
-  .floatchip{display:none}
-  .phone{position:static;margin:0 auto;width:250px;transform:none}
-  .scene{height:auto;display:flex;flex-direction:column;align-items:center}
+  .container{padding-inline:18px}
+  .section{padding:56px 0}
+  .hero{padding:48px 0 36px}
+  .hero__logo{width:84px;height:84px}
+  .hero__title{font-size:clamp(1.7rem,8vw,2.2rem)}
+  .hero__sub{font-size:1rem}
+  .hero__actions{flex-direction:column;align-items:stretch}
+  .hero__actions .btn{width:100%}
+  .btn__hint{position:static;transform:none;display:block;margin-top:.2rem}
+  .assist,.footer__grid{grid-template-columns:1fr}
+  .price__amount span{font-size:2.3rem}
+  .section__head{margin-bottom:40px}
+  .phone{width:240px}
+  .wa-float{width:52px;height:52px;right:16px;bottom:16px}
+  .dev{padding:30px}
+  .footer__bottom{flex-direction:column;text-align:center}
+}
+
+/* Pantallas muy pequeñas */
+@media(max-width:360px){
+  .hero__title{font-size:1.55rem}
+  .phone{width:210px}
+  .brand__text{font-size:1.05rem}
 }
 
 @media (prefers-reduced-motion:reduce){
