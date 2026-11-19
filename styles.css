@@ -82,9 +82,12 @@ img{max-width:100%;display:block}
   background:rgba(5,7,15,.6);border-bottom:1px solid var(--line)}
 .nav__inner{display:flex;align-items:center;gap:1.2rem;height:72px}
 .brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:700}
-.brand__logo{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;overflow:hidden;
-  border:1px solid var(--line-2);box-shadow:0 8px 20px -8px rgba(45,123,255,.6)}
-.brand__logo img{width:100%;height:100%;object-fit:cover}
+/* Logo vectorial recoloreado con el degradado de marca (vía máscara) */
+.brand__logo{display:inline-block;width:42px;height:42px;
+  background:var(--grad);
+  -webkit-mask:url("assets/wazko-logo.svg") center/contain no-repeat;
+  mask:url("assets/wazko-logo.svg") center/contain no-repeat;
+  filter:drop-shadow(0 6px 16px rgba(45,123,255,.5))}
 .brand__text{font-size:1.2rem}
 .brand__accent{color:var(--c1)}
 .nav__links{display:flex;gap:1.6rem;margin-left:auto;font-size:.94rem;color:var(--muted)}
@@ -106,6 +109,13 @@ img{max-width:100%;display:block}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;padding:72px 0 50px}
+.hero__logo{display:block;width:120px;height:120px;margin-bottom:1.4rem;
+  background:var(--grad);
+  -webkit-mask:url("assets/wazko-logo.svg") center/contain no-repeat;
+  mask:url("assets/wazko-logo.svg") center/contain no-repeat;
+  filter:drop-shadow(0 14px 34px rgba(45,123,255,.55));
+  animation:logofloat 6s ease-in-out infinite}
+@keyframes logofloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .hero__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:500;
   color:var(--c1);background:rgba(24,224,168,.08);border:1px solid rgba(24,224,168,.22);
@@ -133,8 +143,15 @@ img{max-width:100%;display:block}
 .chat{background:#0a0e1a;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
 .chat__header{display:flex;align-items:center;gap:.6rem;padding:.7rem .85rem;
   background:linear-gradient(180deg,#121a30,#0d1324);border-bottom:1px solid var(--line)}
-.chat__avatar{width:34px;height:34px;border-radius:50%;overflow:hidden;border:1px solid var(--line-2)}
-.chat__avatar img{width:100%;height:100%;object-fit:cover}
+.chat__avatar{width:34px;height:34px;border-radius:50%;border:1px solid var(--line-2);
+  background:var(--grad);
+  -webkit-mask:url("assets/wazko-logo.svg") center/78% no-repeat,linear-gradient(#000 0 0);
+  mask:url("assets/wazko-logo.svg") center/78% no-repeat}
+/* fallback: el avatar muestra el símbolo recoloreado */
+.chat__avatar{-webkit-mask:none;mask:none;display:grid;place-items:center;background:#0d1324;overflow:hidden}
+.chat__avatar::before{content:"";width:78%;height:78%;background:var(--grad);
+  -webkit-mask:url("assets/wazko-logo.svg") center/contain no-repeat;
+  mask:url("assets/wazko-logo.svg") center/contain no-repeat}
 .chat__meta{display:flex;flex-direction:column;line-height:1.25}
 .chat__meta strong{font-size:.88rem}
 .chat__status{font-size:.68rem;color:var(--c1);display:inline-flex;align-items:center;gap:.3rem}
@@ -350,6 +367,7 @@ img{max-width:100%;display:block}
   .hero__grid{grid-template-columns:1fr;text-align:center}
   .hero__sub,.hero__actions,.hero__chips{margin-inline:auto}
   .hero__actions,.hero__chips{justify-content:center}
+  .hero__logo{margin-inline:auto}
   .hero__visual{margin-top:30px}
   .assist{grid-template-columns:1fr 1fr}
   .metrics{grid-template-columns:1fr}

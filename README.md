@@ -19,7 +19,9 @@ Publicado con **GitHub Pages** en el dominio **wazcoexpress.com**.
 ├── sitemap.xml       # Mapa del sitio
 ├── llms.txt          # Resumen del sitio para IAs
 ├── assets/
-│   ├── wazko-logo.jpg # Logo de la marca (también usado como favicon)
+│   ├── wazko-logo.svg # Logo vectorial (recoloreado con el degradado de marca vía máscara CSS)
+│   ├── wazko-logo.png # Logo a color (OG / apple-touch-icon / respaldo)
+│   ├── wazko-logo.jpg # Logo a color (respaldo)
 │   └── favicon.svg
 ├── docs/
 │   ├── ABOUT.md       # Base de conocimiento completa del producto
