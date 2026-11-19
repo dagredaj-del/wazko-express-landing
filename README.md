@@ -15,10 +15,27 @@ Publicado con **GitHub Pages** en el dominio **wazcoexpress.com**.
 ├── styles.css        # Tema 3D futurista oscuro (glass, grid, orbes, tilt)
 ├── script.js         # Menú móvil, reveal, parallax, tilt 3D, contadores, formulario
 ├── CNAME             # Dominio personalizado (GitHub Pages)
+├── robots.txt        # Rastreo + sitemap
+├── sitemap.xml       # Mapa del sitio
+├── llms.txt          # Resumen del sitio para IAs
 ├── assets/
-│   ├── wazko-logo.jpg # Logo de la marca
+│   ├── wazko-logo.jpg # Logo de la marca (también usado como favicon)
 │   └── favicon.svg
+├── docs/
+│   ├── ABOUT.md       # Base de conocimiento completa del producto
+│   ├── FAQ.md         # Preguntas frecuentes (para el asistente IA)
+│   └── AI_CONTEXT.md  # Contexto del proyecto para IA/desarrolladores
 └── README.md
+
+## 🤖 Archivos de contexto para IA
+
+El sitio incluye información estructurada para que IAs y buscadores entiendan
+Wazko Express:
+- `llms.txt` — resumen del sitio (estándar emergente para asistentes de IA).
+- `robots.txt` + `sitemap.xml` — rastreo e indexación.
+- Datos estructurados **schema.org (JSON-LD)** embebidos en `index.html`.
+- `docs/ABOUT.md` y `docs/FAQ.md` — base de conocimiento detallada que puedes
+  usar para alimentar tu propio asistente de IA.
 ```
 
 ## ▶️ Ver localmente

@@ -17,7 +17,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/wazko-logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="assets/wazko-logo.jpg" />
+  <link rel="canonical" href="https://wazcoexpress.com/" />
+
+  <!-- Datos estructurados para IA y buscadores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Wazko Express",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, WhatsApp",
+    "description": "Asistente conversacional con IA para PyMEs en LatAm. Guía a los clientes en dudas y quejas por WhatsApp, recibe archivos (fotos, PDF, comprobantes) y los interpreta.",
+    "url": "https://wazcoexpress.com/",
+    "image": "https://wazcoexpress.com/assets/wazko-logo.jpg",
+    "offers": [
+      { "@type": "Offer", "name": "Plan Inicial", "price": "49", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Plan Pro", "price": "89", "priceCurrency": "USD" }
+    ],
+    "author": { "@type": "Person", "name": "Danilo Agreda", "jobTitle": "Fundador y CEO" },
+    "founder": { "@type": "Person", "name": "Danilo Agreda" },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "wazco@wazcoexpress.com",
+      "telephone": "+573209271860",
+      "contactType": "customer support",
+      "areaServed": ["CO", "PE", "MX"],
+      "availableLanguage": "es"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -168,15 +199,15 @@
 
       <!-- Trust strip -->
       <div class="container metrics" data-reveal>
-        <div class="metric">
+        <div class="metric glass" data-tilt>
           <span class="metric__num" data-count="0" data-suffix=" min">0 min</span>
           <span class="metric__label">de espera para tus clientes</span>
         </div>
-        <div class="metric">
+        <div class="metric glass" data-tilt>
           <span class="metric__num" data-count="30" data-prefix="+" data-suffix="%">+30%</span>
           <span class="metric__label">de consultas resueltas sin intervención</span>
         </div>
-        <div class="metric">
+        <div class="metric glass" data-tilt>
           <span class="metric__num">&lt; 25%</span>
           <span class="metric__label">del costo de un agente de soporte adicional</span>
         </div>

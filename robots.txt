@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# IAs y rastreadores: contexto del sitio
+# Resumen legible por máquinas en /llms.txt
+Sitemap: https://wazcoexpress.com/sitemap.xml

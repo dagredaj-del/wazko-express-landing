@@ -39,12 +39,17 @@
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Parallax de orbes del fondo + grid
+  // Parallax 3D: orbes, grid y profundidad de cada sección al hacer scroll
   if (!reduceMotion) {
     var orbs = document.querySelectorAll('.bg__orb');
     var grid = document.querySelector('.bg__grid');
+    // Solo bloques que NO tienen tilt propio, para no pelear por el transform
+    var depthEls = document.querySelectorAll('[data-reveal]:not([data-tilt])');
+    var vh = window.innerHeight;
+    window.addEventListener('resize', function () { vh = window.innerHeight; }, { passive: true });
+
     var ticking = false;
-    window.addEventListener('scroll', function () {
+    function onScroll() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
@@ -53,20 +58,37 @@
           o.style.transform = 'translateY(' + (y * (0.04 + i * 0.03)) + 'px)';
         });
         if (grid) grid.style.transform = 'perspective(600px) rotateX(1deg) translateY(' + (y * 0.05) + 'px)';
+
+        // Profundidad 3D sutil: los bloques se enderezan a medida que entran al centro
+        depthEls.forEach(function (el) {
+          if (!el.classList.contains('in')) return;
+          var r = el.getBoundingClientRect();
+          var center = r.top + r.height / 2;
+          var d = (center - vh / 2) / vh; // -0.5..0.5 aprox
+          if (Math.abs(d) > 1.2) return;
+          var rotX = (d * -4).toFixed(2);
+          var ty = (d * 10).toFixed(1);
+          el.style.transform = 'translateY(' + ty + 'px) rotateX(' + rotX + 'deg)';
+        });
         ticking = false;
       });
-    }, { passive: true });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
-  // Tilt 3D en tarjetas y botones
+  // Tilt 3D + brillo que sigue al cursor en TODAS las tarjetas/botones
   if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
     document.querySelectorAll('[data-tilt]').forEach(function (el) {
-      var max = 8;
+      var max = 9;
       el.addEventListener('mousemove', function (ev) {
         var r = el.getBoundingClientRect();
         var px = (ev.clientX - r.left) / r.width - 0.5;
         var py = (ev.clientY - r.top) / r.height - 0.5;
-        el.style.transform = 'perspective(800px) rotateY(' + (px * max) + 'deg) rotateX(' + (-py * max) + 'deg) translateZ(6px)';
+        el.style.transform = 'perspective(900px) rotateY(' + (px * max) + 'deg) rotateX(' + (-py * max) + 'deg) translateZ(10px)';
+        // brillo
+        el.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (ev.clientY - r.top) + 'px');
       });
       el.addEventListener('mouseleave', function () { el.style.transform = ''; });
     });

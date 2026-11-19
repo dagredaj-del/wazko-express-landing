@@ -315,10 +315,29 @@ img{max-width:100%;display:block}
 .wa-float__pulse{position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.5;animation:pulse 2.2s infinite;z-index:-1}
 @keyframes pulse{0%{transform:scale(1);opacity:.5}70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
 
-/* ---------- Reveal + tilt ---------- */
-[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+/* ---------- Reveal + tilt + 3D global ---------- */
+[data-reveal]{opacity:0;transform:translateY(26px) rotateX(6deg);transform-origin:center top;
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 [data-reveal].in{opacity:1;transform:none}
 [data-tilt]{transition:transform .25s ease,box-shadow .25s ease;transform-style:preserve-3d;will-change:transform}
+
+/* Perspectiva 3D en todas las secciones */
+.section,.hero{perspective:1600px}
+.assist,.contrast,.steps,.features,.pricing,.metrics,.contact__grid{transform-style:preserve-3d}
+
+/* Las tarjetas reaccionan con relieve al hover (profundidad) */
+.glass{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease,border-color .3s ease}
+.assist__card:hover,.feature:hover,.step:hover,.price:hover{border-color:var(--line-2)}
+.glass:hover{box-shadow:0 40px 90px -30px rgba(45,123,255,.5),var(--shadow)}
+
+/* Brillo que sigue al cursor dentro de las tarjetas */
+[data-tilt]::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.1),transparent 60%);
+  opacity:0;transition:opacity .3s}
+[data-tilt]:hover::after{opacity:1}
+
+/* Capas con profundidad por scroll */
+[data-depth]{will-change:transform}
 
 /* =========================================================
    Responsive

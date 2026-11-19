@@ -1,0 +1,45 @@
+# Wazko Express
+
+> Asistente conversacional con inteligencia artificial para PyMEs en LatAm.
+> Guía a los clientes en dudas y quejas por WhatsApp, recibe archivos (fotos,
+> PDF, comprobantes) y los interpreta, dejando cada caso ordenado en un panel.
+
+Wazko Express es una plataforma self-service de comercio y atención
+conversacional. Cualquier negocio en Colombia, Perú, México u otro país de
+LatAm puede activarla por sí mismo en minutos, conectar su WhatsApp mediante la
+API oficial de Meta, y poner a funcionar un asistente de soporte con IA.
+
+## Qué hace el asistente
+- Guía dudas y quejas de los clientes 24/7 en lenguaje natural.
+- Recibe archivos en el chat: fotos, PDF, capturas y comprobantes.
+- Interpreta esos archivos con IA (extrae datos, montos, referencias) y decide el siguiente paso.
+- Registra cada caso en un panel con su estado, historial y archivos.
+
+## Cómo se activa (3 pasos)
+1. Subir la información del negocio (catálogo, políticas, respuestas) en PDF, texto o formulario.
+2. Conectar WhatsApp mediante la API oficial de Meta.
+3. El asistente atiende en piloto automático y envía cada caso al panel.
+
+## Diferenciales
+- Pensado para LatAm: direcciones informales, pagos locales (transferencias, billeteras, contraentrega), lenguaje real.
+- Inteligencia de datos: historial de consultas, motivos de queja frecuentes, horarios pico.
+- Estabilidad en horas pico: arquitectura en la nube que soporta picos de tráfico.
+
+## Planes
+- Plan Inicial: 49 USD/mes. Asistente de dudas y quejas, recepción e interpretación de archivos, panel de gestión.
+- Plan Pro: 89 USD/mes (más popular). Conversaciones simultáneas extendidas, interpretación avanzada de documentos, analítica de datos.
+- Sin contratos de permanencia. Se puede cancelar en cualquier momento.
+
+## Producto futuro
+- Wazko Xuper: API para integrar la inteligencia conversacional de Wazko en plataformas de terceros (en lista de espera).
+
+## Contacto
+- Sitio: https://wazcoexpress.com
+- Correo: wazco@wazcoexpress.com
+- WhatsApp: +57 320 927 1860
+- Fundador y CEO: Danilo Agreda (Instagram: @daniloagreda)
+
+## Enlaces
+- [Página principal](https://wazcoexpress.com/)
+- [Base de conocimiento](https://wazcoexpress.com/docs/ABOUT.md)
+- [Preguntas frecuentes](https://wazcoexpress.com/docs/FAQ.md)
