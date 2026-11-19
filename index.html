@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Wazko Express — Convierte tu WhatsApp en una máquina de ventas automática</title>
+  <meta name="description" content="Wazko Express atiende a cientos de clientes al mismo tiempo, toma órdenes estructuradas, valida comprobantes de pago y organiza tu operación en un solo panel. Configúralo tú mismo en 5 minutos." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wazko Express — Comercio conversacional para PyMEs en LatAm" />
+  <meta property="og:description" content="Convierte tu WhatsApp en una máquina de ventas automática, sin perder un solo pedido en hora pico." />
+  <meta property="og:locale" content="es_LA" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Wazko Express inicio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="url(#g1)"/>
+            <path d="M12 18l6 14 6-10 6 10 6-14" stroke="#0b1020" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#25D366"/><stop offset="1" stop-color="#1ea8ff"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="brand__text">Wazko<span class="brand__accent">Express</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#transformacion">Cómo cambia tu operación</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#diferencial">Por qué Wazko</a>
+        <a href="#precios">Precios</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#contacto" class="btn btn--primary btn--sm">Empieza gratis hoy</a>
+      </div>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Infraestructura de Comercio Conversacional para PyMEs en LatAm</p>
+          <h1 class="hero__title">
+            Convierte tu WhatsApp en una <span class="grad">máquina de ventas automática</span>, sin perder un solo pedido en hora pico.
+          </h1>
+          <p class="hero__sub">
+            Wazko Express atiende a <strong>cientos de clientes al mismo tiempo</strong>, toma órdenes estructuradas,
+            valida comprobantes de pago y organiza tu operación en un solo panel.
+            <strong>Configúralo tú mismo en 5 minutos.</strong>
+          </p>
+
+          <div class="hero__actions">
+            <a href="#contacto" class="btn btn--primary btn--lg">
+              Empieza gratis hoy
+              <span class="btn__hint">Sin tarjeta de crédito</span>
+            </a>
+            <a href="https://wa.me/573000000000?text=Hola%20quiero%20probar%20la%20demo%20de%20Wazko%20Express" class="btn btn--ghost btn--lg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.973-1.057zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Probar demo en vivo por WhatsApp
+            </a>
+          </div>
+
+          <p class="hero__micro">Activa tu bot hoy mismo · Cancela cuando quieras</p>
+        </div>
+
+        <!-- Visual mockup: WhatsApp -> Panel -->
+        <div class="hero__visual" aria-hidden="false">
+          <!-- Phone / WhatsApp -->
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__chat">
+              <div class="chat__header">
+                <span class="chat__avatar">W</span>
+                <div class="chat__meta">
+                  <strong>Wazko Express</strong>
+                  <span>en línea · responde al instante</span>
+                </div>
+              </div>
+              <div class="chat__body">
+                <div class="bubble bubble--in">Hola 👋 Bienvenido. ¿Qué te gustaría pedir hoy?</div>
+                <div class="bubble bubble--out">Quiero 2 hamburguesas clásicas y una gaseosa 🍔</div>
+                <div class="bubble bubble--in">
+                  Perfecto ✅ <br>• 2× Hamburguesa clásica — $24.000<br>• 1× Gaseosa — $4.000<br><strong>Total: $28.000</strong><br>¿A qué dirección lo enviamos?
+                </div>
+                <div class="bubble bubble--out">Calle 45 #12-30, apto 302</div>
+                <div class="bubble bubble--in">Envío a esa zona: $5.000. Te comparto los datos para transferencia. Cuando pagues, envíame el comprobante 📸</div>
+                <div class="bubble bubble--out bubble--img">
+                  <span class="receipt">📄 Comprobante_transferencia.jpg</span>
+                </div>
+                <div class="bubble bubble--in bubble--ok">Comprobante validado ✔️ Pedido #1042 confirmado. ¡Gracias!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connector arrow -->
+          <div class="connector" aria-hidden="true">
+            <svg viewBox="0 0 120 60" width="120" height="60"><path d="M4 30 C 50 10, 70 50, 112 30" stroke="url(#gc)" stroke-width="3" fill="none" stroke-dasharray="4 6" stroke-linecap="round"/><path d="M104 22 l10 8 -10 8" stroke="url(#gc)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="gc" x1="0" y1="0" x2="120" y2="0"><stop stop-color="#25D366"/><stop offset="1" stop-color="#1ea8ff"/></linearGradient></defs></svg>
+          </div>
+
+          <!-- Panel -->
+          <div class="panel">
+            <div class="panel__head">
+              <strong>Panel de pedidos</strong>
+              <span class="panel__live">● En vivo</span>
+            </div>
+            <div class="panel__row panel__row--new">
+              <span class="panel__id">#1042</span>
+              <span class="panel__txt">2× Hamburguesa · 1× Gaseosa</span>
+              <span class="tag tag--green">Pagado</span>
+            </div>
+            <div class="panel__row">
+              <span class="panel__id">#1041</span>
+              <span class="panel__txt">Combo familiar</span>
+              <span class="tag tag--amber">En cocina</span>
+            </div>
+            <div class="panel__row">
+              <span class="panel__id">#1040</span>
+              <span class="panel__txt">Pizza pepperoni L</span>
+              <span class="tag tag--blue">En camino</span>
+            </div>
+            <div class="panel__stats">
+              <div><strong>37</strong><span>pedidos hoy</span></div>
+              <div><strong>$1.2M</strong><span>ventas</span></div>
+              <div><strong>0 min</strong><span>espera</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST BAR / MÉTRICAS ===================== -->
+    <section class="trust" aria-label="Métricas de impacto">
+      <div class="container trust__grid">
+        <div class="trust__item">
+          <span class="trust__num">0 min</span>
+          <span class="trust__label">de tiempo de espera para tus clientes</span>
+        </div>
+        <div class="trust__sep" aria-hidden="true"></div>
+        <div class="trust__item">
+          <span class="trust__num">+30%</span>
+          <span class="trust__label">de ventas rescatadas en horas pico</span>
+        </div>
+        <div class="trust__sep" aria-hidden="true"></div>
+        <div class="trust__item">
+          <span class="trust__num">&lt; 25%</span>
+          <span class="trust__label">del costo de contratar un empleado adicional para responder chats</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTRASTE: CAOS vs FLUJO ===================== -->
+    <section class="section" id="transformacion">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">El contraste</p>
+          <h2>El caos manual <span class="grad">vs.</span> el flujo Wazko</h2>
+          <p class="section__lead">No se trata de más funciones. Se trata de cómo cambia tu operación el viernes a las 8 p.m.</p>
+        </div>
+
+        <div class="contrast">
+          <article class="card card--bad">
+            <header class="card__head">
+              <span class="card__ico card__ico--bad">✕</span>
+              <h3>Sin Wazko — El caos</h3>
+            </header>
+            <ul class="list">
+              <li>Clientes dejados en <strong>"visto"</strong> los viernes por la noche.</li>
+              <li>Errores humanos al anotar <strong>direcciones o precios</strong>.</li>
+              <li>Cajeros perdiendo tiempo revisando <strong>pantallazos de transferencias</strong> uno por uno.</li>
+            </ul>
+          </article>
+
+          <article class="card card--good">
+            <header class="card__head">
+              <span class="card__ico card__ico--good">✓</span>
+              <h3>Con Wazko Express — El control</h3>
+            </header>
+            <ul class="list">
+              <li>Atención simultánea <strong>24/7</strong> con tu menú y tarifas reales.</li>
+              <li>Pedidos <strong>estructurados</strong> listos para despacho o cocina.</li>
+              <li>Validación automática de comprobantes y <strong>registro centralizado</strong> de datos.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CÓMO FUNCIONA ===================== -->
+    <section class="section section--alt" id="como-funciona">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Modelo self-service escalable</p>
+          <h2>Cómo funciona</h2>
+          <p class="section__lead">Cualquier negocio, en cualquier país, lo activa solo. Sin instaladores ni visitas técnicas.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Sube tu catálogo</h3>
+            <p>Carga tu menú o lista de productos en segundos (PDF, texto o formulario rápido) y define tus zonas y tarifas de envío.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Conecta tu WhatsApp</h3>
+            <p>La conexión se verifica con <strong>Meta y su API oficial</strong>. Tu número, tu marca, tu control.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Vende en piloto automático</h3>
+            <p>El bot responde, cotiza, valida el pago y envía la orden limpia a tu panel de control.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== DIFERENCIAL ===================== -->
+    <section class="section" id="diferencial">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Diferencial estratégico</p>
+          <h2>Por qué Wazko y no un bot genérico</h2>
+        </div>
+
+        <div class="features">
+          <article class="feature">
+            <span class="feature__ico">🌎</span>
+            <h3>Diseñado para la realidad de LatAm</h3>
+            <p>Entiende direcciones informales, métodos de pago locales (transferencias, billeteras digitales, contraentrega) y el lenguaje natural de tus clientes.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__ico">📊</span>
+            <h3>Inteligencia de datos (Data Moat)</h3>
+            <p>No solo responde chats; guarda el historial de consumo, los productos estrella y los horarios pico para que tomes mejores decisiones.</p>
+          </article>
+          <article class="feature">
+            <span class="feature__ico">⚡</span>
+            <h3>Estabilidad en horas pico</h3>
+            <p>Arquitectura en la nube diseñada para soportar picos de tráfico sin colapsar ni dejar pedidos a medias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRECIOS ===================== -->
+    <section class="section section--alt" id="precios">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Precios transparentes</p>
+          <h2>Anclados al valor, no a la nómina</h2>
+          <p class="section__lead">Cuesta menos de un cuarto de un salario mínimo. Tú decides cuánto creces.</p>
+        </div>
+
+        <div class="pricing">
+          <article class="price">
+            <h3 class="price__name">Plan Inicial</h3>
+            <p class="price__amount"><span>$49</span> USD/mes</p>
+            <p class="price__for">Ideal para negocios en crecimiento.</p>
+            <ul class="list">
+              <li>Automatización completa de menú</li>
+              <li>Toma de pedidos estructurada</li>
+              <li>Panel de gestión</li>
+            </ul>
+            <a href="#contacto" class="btn btn--ghost btn--block">Empezar</a>
+          </article>
+
+          <article class="price price--pop">
+            <span class="price__badge">Más popular</span>
+            <h3 class="price__name">Plan Pro</h3>
+            <p class="price__amount"><span>$89</span> USD/mes</p>
+            <p class="price__for">Para comercios de alto tráfico.</p>
+            <ul class="list">
+              <li>Conversaciones simultáneas extendidas</li>
+              <li>Validación avanzada de comprobantes</li>
+              <li>Analítica de datos</li>
+            </ul>
+            <a href="#contacto" class="btn btn--primary btn--block">Empezar ahora</a>
+          </article>
+        </div>
+
+        <p class="pricing__note">Sin contratos de permanencia. Cancela cuando quieras. <strong>Cuesta menos de un cuarto de un salario mínimo.</strong></p>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO / FORMULARIO ===================== -->
+    <section class="section" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__copy">
+          <p class="kicker">Empieza gratis hoy</p>
+          <h2>Activa tu bot y deja de perder pedidos</h2>
+          <p class="section__lead">Déjanos tus datos y te ayudamos a configurar tu WhatsApp en minutos. Sin tarjeta de crédito.</p>
+          <ul class="list list--check">
+            <li>Respuesta directa del equipo fundador</li>
+            <li>Configuración guiada de tu catálogo</li>
+            <li>Demo con tu caso real</li>
+          </ul>
+          <p class="contact__mail">
+            ¿Prefieres escribir? <a href="mailto:wazco@wazcoexpress.com">wazco@wazcoexpress.com</a>
+          </p>
+        </div>
+
+        <!-- 
+          FORMULARIO: los envíos llegan SOLO a tu correo (wazco@wazcoexpress.com)
+          vía Formspree. Reemplaza TU_FORM_ID por el ID real de tu formulario.
+          Instrucciones en README.md
+        -->
+        <form class="form" id="leadForm" action="https://formspree.io/f/TU_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nuevo lead desde Wazko Express" />
+          <!-- honeypot anti-spam -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="field">
+            <label for="negocio">Nombre de tu negocio</label>
+            <input id="negocio" name="negocio" type="text" placeholder="Ej: Burger House" required />
+          </div>
+          <div class="field">
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="field">
+            <label for="whatsapp">WhatsApp</label>
+            <input id="whatsapp" name="whatsapp" type="tel" placeholder="+57 300 000 0000" required />
+          </div>
+          <div class="field">
+            <label for="pais">País</label>
+            <select id="pais" name="pais" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>Colombia</option>
+              <option>Perú</option>
+              <option>México</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensaje">¿Qué vendes? (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos sobre tu negocio…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Empieza gratis hoy</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form__legal">Al enviar aceptas nuestros <a href="#footer">Términos</a> y <a href="#footer">Política de Privacidad</a>.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER / VISIÓN TÉCNICA ===================== -->
+    <section class="section section--dev">
+      <div class="container dev__box">
+        <div class="dev__copy">
+          <p class="kicker kicker--light">Para perfiles técnicos e inversionistas</p>
+          <h2>¿Eres desarrollador?</h2>
+          <p>Conoce <strong>Wazko Xuper</strong>, nuestra próxima API para integrar nuestra inteligencia conversacional directamente en tu propia plataforma web.</p>
+        </div>
+        <a href="#contacto" class="btn btn--light btn--lg">Unirse a la lista de espera</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="30" height="30" fill="none"><rect width="48" height="48" rx="12" fill="url(#g2)"/><path d="M12 18l6 14 6-10 6 10 6-14" stroke="#0b1020" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g2" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#25D366"/><stop offset="1" stop-color="#1ea8ff"/></linearGradient></defs></svg>
+          </span>
+          <span class="brand__text">Wazko<span class="brand__accent">Express</span></span>
+        </span>
+        <p class="footer__tagline">Infraestructura de comercio conversacional para PyMEs en LatAm.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+        <a href="#diferencial">Por qué Wazko</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <a href="#footer">Términos</a>
+        <a href="#footer">Privacidad</a>
+        <a href="#contacto">Soporte</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <a href="mailto:wazco@wazcoexpress.com">wazco@wazcoexpress.com</a>
+        <div class="founder">
+          <a href="https://instagram.com/daniloagreda" target="_blank" rel="noopener" class="founder__link" aria-label="Instagram de Danilo Agreda, Fundador y CEO">
+            <span class="founder__ig" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.22 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.46 2.21 8.84 2.2 12 2.2zm0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 00-.69-1.06 2.86 2.86 0 00-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 3.37a4.45 4.45 0 110 8.9 4.45 4.45 0 010-8.9zm0 7.34a2.89 2.89 0 100-5.78 2.89 2.89 0 000 5.78zm5.66-7.58a1.04 1.04 0 11-2.08 0 1.04 1.04 0 012.08 0z"/></svg>
+            </span>
+            <span class="founder__meta">
+              <strong>Danilo Agreda</strong>
+              <em>Fundador &amp; CEO · @daniloagreda</em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Wazko Express. Todos los derechos reservados.</p>
+      <p class="footer__built">Hecho para PyMEs de LatAm 🌎</p>
+    </div>
+  </footer>
+
+  <!-- ===================== WHATSAPP FLOATING ===================== -->
+  <a href="https://wa.me/573000000000?text=Hola%20tengo%20una%20duda%20sobre%20Wazko%20Express" class="wa-float" target="_blank" rel="noopener" aria-label="Chatea con nosotros por WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.973-1.057zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <span class="wa-float__pulse" aria-hidden="true"></span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
