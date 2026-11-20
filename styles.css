@@ -302,7 +302,8 @@ img{max-width:100%;display:block}
 .footer__col h4{font-size:.95rem;margin-bottom:1rem}
 .footer__col a{display:block;color:var(--muted);font-size:.92rem;margin-bottom:.6rem}
 .footer__col a:hover{color:var(--ink)}
-.founder{margin-top:1rem}
+.footer__col .founder__link{margin-top:.8rem;margin-bottom:.4rem}
+.founder{margin-top:.4rem}
 .founder__link{display:inline-flex;align-items:center;gap:.7rem;padding:.6rem .8rem;border-radius:14px;
   border:1px solid var(--line);background:var(--glass);transition:transform .2s,border-color .2s}
 .founder__link:hover{transform:translateY(-2px);border-color:rgba(24,224,168,.4)}

@@ -101,6 +101,7 @@ directamente en sus propias plataformas web. Actualmente en lista de espera.
 - **Sitio web**: https://wazcoexpress.com
 - **Correo**: wazco@wazcoexpress.com
 - **WhatsApp**: +57 320 927 1860
+- **Instagram oficial**: @wazcoexpress_oficial
 - **Fundador y CEO**: Danilo Agreda — Instagram @daniloagreda
 - **Identidad**: marca tecnológica, moderna, confiable; estética 3D futurista
   oscura; colores de marca verde/teal, azul, violeta y acento naranja.
